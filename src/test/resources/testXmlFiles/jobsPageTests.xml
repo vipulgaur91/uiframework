@@ -3,7 +3,7 @@
 <suite name="Suite">
 	<test name="Jobs Page Test">
 		<classes>
-			<class name="baseAutomation.JobsPageTest" />
+			<class name="automationTests.JobsPageTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

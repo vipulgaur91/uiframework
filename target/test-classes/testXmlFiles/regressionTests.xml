@@ -3,10 +3,10 @@
 <suite name="Suite">
 	<test name="All Tests">
 		<classes>
-			<class name="baseAutomation.HelpPageTest" />
-			<class name="baseAutomation.HomePageTest" />
-			<class name="baseAutomation.JobsPageTest" />
-			<class name="baseAutomation.LoginPageTest" />
+			<class name="automationTests.HelpPageTest" />
+			<class name="automationTests.HomePageTest" />
+			<class name="automationTests.JobsPageTest" />
+			<class name="automationTests.LoginPageTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
