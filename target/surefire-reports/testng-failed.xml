@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]" parallel="none">
+  <test name="All Tests">
+    <classes>
+      <class name="automationTests.HelpPageTest"/>
+      <class name="automationTests.HomePageTest"/>
+      <class name="automationTests.JobsPageTest"/>
+      <class name="automationTests.LoginPageTest"/>
+    </classes>
+  </test> <!-- All Tests -->
+  <test name="All Tests(failed)" parallel="none">
+    <classes>
+      <class name="automationTests.LoginPageTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- automationTests.LoginPageTest -->
+      <class name="automationTests.HelpPageTest">
+        <methods>
+          <include name="moveResultsToCurrentTestResults"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="ArchiveResultsAtStart"/>
+          <include name="beforeMethod"/>
+          <include name="searchSolutionAndVerifyResultsOnHelpPage"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- automationTests.HelpPageTest -->
+      <class name="automationTests.JobsPageTest">
+        <methods>
+          <include name="navigateToJobsPageAndViewJobsInStudentProgrammes"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- automationTests.JobsPageTest -->
+      <class name="automationTests.HomePageTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- automationTests.HomePageTest -->
+    </classes>
+  </test> <!-- All Tests(failed) -->
+</suite> <!-- Failed suite [Suite] -->

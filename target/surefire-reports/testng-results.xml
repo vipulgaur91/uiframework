@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" total="8" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="108164" started-at="2021-09-15T05:06:10Z" finished-at="2021-09-15T05:07:58Z">
+    <groups>
+    </groups>
+    <test name="All Tests" duration-ms="108164" started-at="2021-09-15T05:06:10Z" finished-at="2021-09-15T05:07:58Z">
+      <class name="automationTests.LoginPageTest">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:automationTests.LoginPageTest@25af5db5]" name="beforeMethod" is-config="true" duration-ms="3645" started-at="2021-09-15T10:37:49Z" finished-at="2021-09-15T10:37:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void automationTests.LoginPageTest.testLoginWithInvalidCredentials() throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testLoginWithInvalidCredentials()[pri:0, instance:automationTests.LoginPageTest@25af5db5]" name="testLoginWithInvalidCredentials" duration-ms="4636" started-at="2021-09-15T10:37:52Z" finished-at="2021-09-15T10:37:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithInvalidCredentials -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:automationTests.LoginPageTest@25af5db5]" name="afterMethod" is-config="true" duration-ms="644" started-at="2021-09-15T10:37:57Z" finished-at="2021-09-15T10:37:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLoginWithInvalidCredentials status=SUCCESS method=LoginPageTest.testLoginWithInvalidCredentials()[pri:0, instance:automationTests.LoginPageTest@25af5db5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- automationTests.LoginPageTest -->
+      <class name="automationTests.JobsPageTest">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:automationTests.JobsPageTest@5bfbf16f]" name="beforeMethod" is-config="true" duration-ms="3645" started-at="2021-09-15T10:37:44Z" finished-at="2021-09-15T10:37:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void automationTests.JobsPageTest.navigateToJobsPageAndViewJobsInStudentProgrammes()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="navigateToJobsPageAndViewJobsInStudentProgrammes()[pri:0, instance:automationTests.JobsPageTest@5bfbf16f]" name="navigateToJobsPageAndViewJobsInStudentProgrammes" duration-ms="373" started-at="2021-09-15T10:37:47Z" finished-at="2021-09-15T10:37:48Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Amazon.jobs: Help us build Earth’s most customer-centric company.] but found [Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Amazon.jobs: Help us build Earth’s most customer-centric company.] but found [Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at pageObjects.JobsPageEvents.verifyIfJobsPageIsLoaded(JobsPageEvents.java:23)
+	at automationTests.JobsPageTest.navigateToJobsPageAndViewJobsInStudentProgrammes(JobsPageTest.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:282)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:83)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:114)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToJobsPageAndViewJobsInStudentProgrammes -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:automationTests.JobsPageTest@5bfbf16f]" name="afterMethod" is-config="true" duration-ms="1038" started-at="2021-09-15T10:37:48Z" finished-at="2021-09-15T10:37:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=navigateToJobsPageAndViewJobsInStudentProgrammes status=FAILURE method=JobsPageTest.navigateToJobsPageAndViewJobsInStudentProgrammes()[pri:0, instance:automationTests.JobsPageTest@5bfbf16f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- automationTests.JobsPageTest -->
+      <class name="automationTests.HomePageTest">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:automationTests.HomePageTest@59906517]" name="beforeMethod" is-config="true" duration-ms="3717" started-at="2021-09-15T10:37:11Z" finished-at="2021-09-15T10:37:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void automationTests.HomePageTest.changeHomePageLanguage() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="changeHomePageLanguage()[pri:0, instance:automationTests.HomePageTest@59906517]" name="changeHomePageLanguage" duration-ms="5620" started-at="2021-09-15T10:37:14Z" finished-at="2021-09-15T10:37:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changeHomePageLanguage -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:automationTests.HomePageTest@59906517]" name="afterMethod" is-config="true" duration-ms="693" started-at="2021-09-15T10:37:20Z" finished-at="2021-09-15T10:37:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=changeHomePageLanguage status=SUCCESS method=HomePageTest.changeHomePageLanguage()[pri:0, instance:automationTests.HomePageTest@59906517] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:automationTests.HomePageTest@59906517]" name="beforeMethod" is-config="true" duration-ms="3886" started-at="2021-09-15T10:37:21Z" finished-at="2021-09-15T10:37:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void automationTests.HomePageTest.enterPincode() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="enterPincode()[pri:0, instance:automationTests.HomePageTest@59906517]" name="enterPincode" duration-ms="7489" started-at="2021-09-15T10:37:25Z" finished-at="2021-09-15T10:37:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterPincode -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:automationTests.HomePageTest@59906517]" name="afterMethod" is-config="true" duration-ms="699" started-at="2021-09-15T10:37:32Z" finished-at="2021-09-15T10:37:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=enterPincode status=SUCCESS method=HomePageTest.enterPincode()[pri:0, instance:automationTests.HomePageTest@59906517] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:automationTests.HomePageTest@59906517]" name="beforeMethod" is-config="true" duration-ms="3768" started-at="2021-09-15T10:37:33Z" finished-at="2021-09-15T10:37:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void automationTests.HomePageTest.validateSearchResultsForValidSearchQuery() throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="validateSearchResultsForValidSearchQuery()[pri:0, instance:automationTests.HomePageTest@59906517]" name="validateSearchResultsForValidSearchQuery" duration-ms="2111" started-at="2021-09-15T10:37:37Z" finished-at="2021-09-15T10:37:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSearchResultsForValidSearchQuery -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:automationTests.HomePageTest@59906517]" name="afterMethod" is-config="true" duration-ms="641" started-at="2021-09-15T10:37:39Z" finished-at="2021-09-15T10:37:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateSearchResultsForValidSearchQuery status=SUCCESS method=HomePageTest.validateSearchResultsForValidSearchQuery()[pri:0, instance:automationTests.HomePageTest@59906517] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:automationTests.HomePageTest@59906517]" name="beforeMethod" is-config="true" duration-ms="3665" started-at="2021-09-15T10:37:39Z" finished-at="2021-09-15T10:37:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void automationTests.HomePageTest.verifyHomePage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="verifyHomePage()[pri:0, instance:automationTests.HomePageTest@59906517]" name="verifyHomePage" duration-ms="52" started-at="2021-09-15T10:37:43Z" finished-at="2021-09-15T10:37:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePage -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:automationTests.HomePageTest@59906517]" name="afterMethod" is-config="true" duration-ms="661" started-at="2021-09-15T10:37:43Z" finished-at="2021-09-15T10:37:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyHomePage status=SUCCESS method=HomePageTest.verifyHomePage()[pri:0, instance:automationTests.HomePageTest@59906517] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- automationTests.HomePageTest -->
+      <class name="automationTests.HelpPageTest">
+        <test-method status="PASS" signature="ArchiveResultsAtStart()[pri:0, instance:automationTests.HelpPageTest@cb51256]" name="ArchiveResultsAtStart" is-config="true" duration-ms="9" started-at="2021-09-15T10:36:10Z" finished-at="2021-09-15T10:36:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ArchiveResultsAtStart -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:automationTests.HelpPageTest@cb51256]" name="beforeTest" is-config="true" duration-ms="106" started-at="2021-09-15T10:36:10Z" finished-at="2021-09-15T10:36:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:automationTests.HelpPageTest@cb51256]" name="beforeMethod" is-config="true" duration-ms="4382" started-at="2021-09-15T10:36:10Z" finished-at="2021-09-15T10:36:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void automationTests.HelpPageTest.clickOnCustomerServiceAndNavigateToHelpPage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="clickOnCustomerServiceAndNavigateToHelpPage()[pri:0, instance:automationTests.HelpPageTest@cb51256]" name="clickOnCustomerServiceAndNavigateToHelpPage" duration-ms="10146" started-at="2021-09-15T10:36:14Z" finished-at="2021-09-15T10:36:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnCustomerServiceAndNavigateToHelpPage -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:automationTests.HelpPageTest@cb51256]" name="afterMethod" is-config="true" duration-ms="675" started-at="2021-09-15T10:36:25Z" finished-at="2021-09-15T10:36:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickOnCustomerServiceAndNavigateToHelpPage status=SUCCESS method=HelpPageTest.clickOnCustomerServiceAndNavigateToHelpPage()[pri:0, instance:automationTests.HelpPageTest@cb51256] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:automationTests.HelpPageTest@cb51256]" name="beforeMethod" is-config="true" duration-ms="3509" started-at="2021-09-15T10:36:25Z" finished-at="2021-09-15T10:36:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void automationTests.HelpPageTest.searchSolutionAndVerifyResultsOnHelpPage() throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="searchSolutionAndVerifyResultsOnHelpPage()[pri:0, instance:automationTests.HelpPageTest@cb51256]" name="searchSolutionAndVerifyResultsOnHelpPage" duration-ms="41180" started-at="2021-09-15T10:36:29Z" finished-at="2021-09-15T10:37:10Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div/h1[contains(text(),'Help Search Results')]"}
+  (Session info: chrome=93.0.4577.82)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'IN-D6X7TT2', ip: '192.168.0.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\VIPULG~1.GAU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:53246}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 906d05a16e1af48d0a16a09686574bdd
+*** Element info: {Using=xpath, value=//div/h1[contains(text(),'Help Search Results')]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div/h1[contains(text(),'Help Search Results')]"}
+  (Session info: chrome=93.0.4577.82)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'IN-D6X7TT2', ip: '192.168.0.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\VIPULG~1.GAU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:53246}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 906d05a16e1af48d0a16a09686574bdd
+*** Element info: {Using=xpath, value=//div/h1[contains(text(),'Help Search Results')]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at utilities.webelementsUtil.getWebElement(webelementsUtil.java:42)
+	at pageObjects.HelpPageEvents.verifySearchResults(HelpPageEvents.java:41)
+	at automationTests.HelpPageTest.searchSolutionAndVerifyResultsOnHelpPage(HelpPageTest.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:282)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:83)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:114)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchSolutionAndVerifyResultsOnHelpPage -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:automationTests.HelpPageTest@cb51256]" name="afterMethod" is-config="true" duration-ms="894" started-at="2021-09-15T10:37:10Z" finished-at="2021-09-15T10:37:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchSolutionAndVerifyResultsOnHelpPage status=FAILURE method=HelpPageTest.searchSolutionAndVerifyResultsOnHelpPage()[pri:0, instance:automationTests.HelpPageTest@cb51256] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:automationTests.HelpPageTest@cb51256]" name="afterTest" is-config="true" duration-ms="272" started-at="2021-09-15T10:37:58Z" finished-at="2021-09-15T10:37:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="moveResultsToCurrentTestResults()[pri:0, instance:automationTests.HelpPageTest@cb51256]" name="moveResultsToCurrentTestResults" is-config="true" duration-ms="10" started-at="2021-09-15T10:37:58Z" finished-at="2021-09-15T10:37:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- moveResultsToCurrentTestResults -->
+      </class> <!-- automationTests.HelpPageTest -->
+    </test> <!-- All Tests -->
+  </suite> <!-- Suite -->
+</testng-results>

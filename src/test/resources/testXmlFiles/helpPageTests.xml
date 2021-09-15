@@ -3,7 +3,11 @@
 <suite name="Suite">
 	<test name="Help Page Test">
 		<classes>
-			<class name="automationTests.HelpPageTest" />
+			<class name="automationTests.HelpPageTest">
+				<methods>
+					<include name="verifySearchResults"/>
+				</methods>
+			</class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

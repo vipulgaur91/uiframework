@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 109.582 sec <<< FAILURE! - in TestSuite
+searchSolutionAndVerifyResultsOnHelpPage(automationTests.HelpPageTest)  Time elapsed: 41.187 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div/h1[contains(text(),'Help Search Results')]"}
+  (Session info: chrome=93.0.4577.82)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'IN-D6X7TT2', ip: '192.168.0.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\VIPULG~1.GAU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:53246}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 906d05a16e1af48d0a16a09686574bdd
+*** Element info: {Using=xpath, value=//div/h1[contains(text(),'Help Search Results')]}
+	at automationTests.HelpPageTest.searchSolutionAndVerifyResultsOnHelpPage(HelpPageTest.java:36)
+
+navigateToJobsPageAndViewJobsInStudentProgrammes(automationTests.JobsPageTest)  Time elapsed: 0.373 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Amazon.jobs: Help us build Earth’s most customer-centric company.] but found [Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in]
+	at automationTests.JobsPageTest.navigateToJobsPageAndViewJobsInStudentProgrammes(JobsPageTest.java:17)
+
