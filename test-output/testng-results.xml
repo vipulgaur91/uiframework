@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="11469" started-at="2021-09-18T12:28:08Z" finished-at="2021-09-18T12:28:19Z">
+    <groups>
+      <group name="UI">
+        <method signature="HomePageTest.validateSearchResultsForValidCitySearch()[pri:1, instance:automationTests.HomePageTest@76b10754]" name="validateSearchResultsForValidCitySearch" class="automationTests.HomePageTest"/>
+      </group> <!-- UI -->
+      <group name="API">
+        <method signature="APIWeatherTest.getWeatherInformation()[pri:1, instance:automationTests.APIWeatherTest@2bea5ab4]" name="getWeatherInformation" class="automationTests.APIWeatherTest"/>
+      </group> <!-- API -->
+    </groups>
+    <test name="All Tests" duration-ms="11469" started-at="2021-09-18T12:28:08Z" finished-at="2021-09-18T12:28:19Z">
+      <class name="automationTests.APIWeatherTest">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:automationTests.APIWeatherTest@2bea5ab4]" name="beforeMethod" is-config="true" duration-ms="386" started-at="2021-09-18T17:58:17Z" finished-at="2021-09-18T17:58:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void automationTests.APIWeatherTest.getWeatherInformation() throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="getWeatherInformation()[pri:1, instance:automationTests.APIWeatherTest@2bea5ab4]" name="getWeatherInformation" duration-ms="1359" started-at="2021-09-18T17:58:17Z" finished-at="2021-09-18T17:58:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getWeatherInformation -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:automationTests.APIWeatherTest@2bea5ab4]" name="afterMethod" is-config="true" duration-ms="1" started-at="2021-09-18T17:58:19Z" finished-at="2021-09-18T17:58:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getWeatherInformation status=SUCCESS method=APIWeatherTest.getWeatherInformation()[pri:1, instance:automationTests.APIWeatherTest@2bea5ab4] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void automationTests.APIWeatherTest.getWeatherInformation() throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- automationTests.APIWeatherTest -->
+      <class name="automationTests.HomePageTest">
+        <test-method status="PASS" signature="ArchiveResultsAtStart()[pri:0, instance:automationTests.HomePageTest@76b10754]" name="ArchiveResultsAtStart" is-config="true" duration-ms="21" started-at="2021-09-18T17:58:08Z" finished-at="2021-09-18T17:58:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ArchiveResultsAtStart -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:automationTests.HomePageTest@76b10754]" name="beforeTest" is-config="true" duration-ms="97" started-at="2021-09-18T17:58:08Z" finished-at="2021-09-18T17:58:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:automationTests.HomePageTest@76b10754]" name="beforeMethod" is-config="true" duration-ms="6070" started-at="2021-09-18T17:58:08Z" finished-at="2021-09-18T17:58:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void automationTests.HomePageTest.validateSearchResultsForValidCitySearch() throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="validateSearchResultsForValidCitySearch()[pri:1, instance:automationTests.HomePageTest@76b10754]" name="validateSearchResultsForValidCitySearch" duration-ms="2562" started-at="2021-09-18T17:58:14Z" finished-at="2021-09-18T17:58:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSearchResultsForValidCitySearch -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:automationTests.HomePageTest@76b10754]" name="afterMethod" is-config="true" duration-ms="671" started-at="2021-09-18T17:58:16Z" finished-at="2021-09-18T17:58:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateSearchResultsForValidCitySearch status=SUCCESS method=HomePageTest.validateSearchResultsForValidCitySearch()[pri:1, instance:automationTests.HomePageTest@76b10754] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void automationTests.HomePageTest.validateSearchResultsForValidCitySearch() throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:automationTests.HomePageTest@76b10754]" name="afterTest" is-config="true" duration-ms="311" started-at="2021-09-18T17:58:19Z" finished-at="2021-09-18T17:58:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="moveResultsToCurrentTestResults()[pri:0, instance:automationTests.HomePageTest@76b10754]" name="moveResultsToCurrentTestResults" is-config="true" duration-ms="4" started-at="2021-09-18T17:58:19Z" finished-at="2021-09-18T17:58:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- moveResultsToCurrentTestResults -->
+      </class> <!-- automationTests.HomePageTest -->
+    </test> <!-- All Tests -->
+  </suite> <!-- Suite -->
+</testng-results>

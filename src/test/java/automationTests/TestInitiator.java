@@ -9,6 +9,9 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import io.restassured.RestAssured;
+import io.restassured.specification.RequestSpecification;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
@@ -19,8 +22,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
@@ -31,12 +32,11 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterTest;
 import utilities.configPropertyReader;
 
@@ -50,6 +50,9 @@ public class TestInitiator {
   String extentReportPath = baseResourcesPath + "reports" + File.separator;
   String screenshotsPath = baseResourcesPath + "screenshots" + File.separator;
   private static String configPropertiesFilename = "config.properties";
+  public static double temp_ui;
+  public static double temp_api;
+  public static RequestSpecification apiSpec;
 
   
   @BeforeTest
@@ -67,21 +70,29 @@ public class TestInitiator {
   @BeforeMethod
   public void beforeMethod(Method testMethod) throws IOException {
 	  logger = extent.createTest(testMethod.getName());
-	  setupDriver(configPropertyReader.readAndGetProperty("browserName", configPropertiesFilename).toString());
-	  driver.manage().window().maximize();
-	  driver.manage().timeouts().implicitlyWait(Integer.parseInt(configPropertyReader.readAndGetProperty("timeout", configPropertiesFilename)), TimeUnit.SECONDS);
-	  driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-	  driver.manage().deleteAllCookies();
-	  driver.get(configPropertyReader.readAndGetProperty("url", configPropertiesFilename));
+	  Test t = testMethod.getAnnotation(Test.class);
+	  if(t.groups()[0].equals("UI")) {
+		  setupDriver(configPropertyReader.readAndGetProperty("browserName", configPropertiesFilename).toString());
+		  driver.manage().window().maximize();
+		  driver.manage().timeouts().implicitlyWait(Integer.parseInt(configPropertyReader.readAndGetProperty("timeout", configPropertiesFilename)), TimeUnit.SECONDS);
+		  driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+		  driver.manage().deleteAllCookies();
+		  driver.get(configPropertyReader.readAndGetProperty("url", configPropertiesFilename));  
+		} else if (t.groups()[0].equals("API")) {
+			RestAssured.baseURI = configPropertyReader.readAndGetProperty("backendUrl", configPropertiesFilename);
+			apiSpec = RestAssured.given();
+		}
   }
   
   @AfterTest
   public void afterTest() {
+	  logger.info("Global temperature UI: "+temp_ui+"K");
+	  logger.info("Global temperature API: "+temp_api+"K");
 	  extent.flush();
   }
 
   @AfterMethod
-  public void afterMethod(ITestResult result) throws IOException {
+  public void afterMethod(ITestResult result, Method testMethod) throws IOException {
 	  if(result.getStatus() == ITestResult.SUCCESS)
 	  {
 		  String methodName = result.getMethod().getMethodName();
@@ -105,8 +116,11 @@ public class TestInitiator {
 		  Markup m = MarkupHelper.createLabel(logText, ExtentColor.YELLOW);
 		  logger.log(Status.SKIP, m);
 	  }
-	  logger.info("Closing all the Browsers");
-	  driver.quit();
+	  Test t = testMethod.getAnnotation(Test.class);
+	  if(t.groups()[0].equals("UI")) {
+		  logger.info("Closing all the Browsers");
+		  driver.quit();  
+	  }
   }
 
 public void setupDriver(String browserName)
